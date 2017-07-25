@@ -1,0 +1,52 @@
+.btn-default {
+  width: 60px;
+  height: 50px;
+  margin-top: 3px;
+}
+
+.btn-ac {
+  background: blue;
+  border-color: black;
+}
+
+.btn-ce {
+  background: red;
+  border-color: black;
+}
+
+.btn-zero {
+  width: 124px;
+  position: relative;
+  top: -54px;
+  left: -32px;
+}
+
+.btn-dot {
+  position: relative;
+  top: -54px;
+  left: -32px;
+}
+
+.btn-equals {
+  height: 104px;
+  background: red;
+  border-color: black;
+}
+
+.center {
+  margin: auto;
+}
+
+p {
+  text-align: right;
+}
+
+.calcBody {
+  width: 310px;
+  height: 450px;
+  background: black;
+  border-radius: 10%;
+  box-shadow: 10px 10px 20px #888888, 10px 10px 20px gray inset;
+  margin-bottom: 2cm;
+  margin-top: 2cm;
+}

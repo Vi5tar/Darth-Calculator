@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Darth Calculator</title>
+  <link href="https://fonts.googleapis.com/css?family=Baloo|Bungee|Kumar+One|Montserrat+Subrayada|Orbitron" rel="stylesheet">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <!--<div class="container">
+  <div class="well">
+    <p id="display"></p>
+  </div>
+
+
+  <div class="well">
+    <div class ="center">
+    <button type="button" class="btn btn-default" onclick="ac()" id="ac">AC</button>
+    <button type="button" class="btn btn-default" onclick="ce()" id="ce">CE</button>
+    <button type="button" class="btn btn-default" onclick="divide()" id="divide">&#247</button>
+    <button type="button" class="btn btn-default" onclick="multiply()" id="multiply">X</button><br>
+    <button type="button" class="btn btn-default" onclick="seven()" id="seven">7</button>
+    <button type="button" class="btn btn-default" onclick="eight()" id="eight">8</button>
+    <button type="button" class="btn btn-default" onclick="nine()" id="nine">9</button>
+    <button type="button" class="btn btn-default" onclick="minus()" id="minus">-</button><br>
+    <button type="button" class="btn btn-default" onclick="four()" id="four">4</button>
+    <button type="button" class="btn btn-default" onclick="five()" id="five">5</button>
+    <button type="button" class="btn btn-default" onclick="six()" id="six">6</button>
+    <button type="button" class="btn btn-default" onclick="plus()" id="plus">+</button><br>
+    <button type="button" class="btn btn-default" onclick="one()" id="one">1</button>
+    <button type="button" class="btn btn-default" onclick="two()" id="two">2</button>
+    <button type="button" class="btn btn-default" onclick="three()" id="three">3</button><br>
+    <button type="button" class="btn btn-default" onclick="zero()" id="zero">0</button>
+    <button type="button" class="btn btn-default" onclick="dot()" id="dot">.</button>
+    <button type="button" class="btn btn-default" onclick="compute()" id="equals">=</button><br>
+    </div>
+  </div>    
+</div>-->
+
+<div class="container">
+  <div class="calcBody container">
+    <p style="text-align: center; color: red; font-weight: bold; position:relative; top:7px;">Darth Calculator</p>
+    <div class="well" style="position:relative; top:5px; margin-left: 10px; margin-right: 10px">
+      <p id="display"></p>
+    </div>
+    <div class="text-center" style="margin-top: 40px;">
+      <button type="button" class="btn btn-default btn-ac" onclick="ac()" id="ac">AC</button>
+      <button type="button" class="btn btn-default btn-ce" onclick="ce()" id="ce">CE</button>
+      <button type="button" class="btn btn-default" onclick="divide()" id="divide">&#247</button>
+      <button type="button" class="btn btn-default" onclick="multiply()" id="multiply">X</button><br>
+      <button type="button" class="btn btn-default" onclick="seven()" id="seven">7</button>
+      <button type="button" class="btn btn-default" onclick="eight()" id="eight">8</button>
+      <button type="button" class="btn btn-default" onclick="nine()" id="nine">9</button>
+      <button type="button" class="btn btn-default" onclick="minus()" id="minus">-</button><br>
+      <button type="button" class="btn btn-default" onclick="four()" id="four">4</button>
+      <button type="button" class="btn btn-default" onclick="five()" id="five">5</button>
+      <button type="button" class="btn btn-default" onclick="six()" id="six">6</button>
+      <button type="button" class="btn btn-default" onclick="plus()" id="plus">+</button><br>
+      <button type="button" class="btn btn-default" style="position:relative; top:-27px" onclick="one()" id="one">1</button>
+      <button type="button" class="btn btn-default" style="position:relative; top:-27px" onclick="two()" id="two">2</button>
+      <button type="button" class="btn btn-default" style="position:relative; top:-27px" onclick="three()" id="three">3</button>
+      <button type="button" class="btn btn-default btn-equals" onclick="compute()" id="equals">=</button><br>
+      <button type="button" class="btn btn-default btn-zero" onclick="zero()" id="zero">0</button>
+      <button type="button" class="btn btn-default btn-dot" onclick="dot()" id="dot">.</button>
+
+
+    </div>
+
+  </div>
+</div>
+
+<!--<button type="button" class="btn btn-default" onclick="equationLog()" id="equationLog">Log Equation</button><br>-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
