@@ -9,8 +9,38 @@
   border-color: black;
 }
 
+.btn-ac:hover {
+  background: #0000CC;
+  border-color: black;
+}
+
+.btn-default.btn-ac:active {
+  background: #0000AA;
+  border-color: black;
+}
+
+.btn-ac:focus {
+  background: #0000CC;
+  border-color: black;
+}
+
 .btn-ce {
   background: red;
+  border-color: black;
+}
+
+.btn-ce:hover {
+  background: #CC0000;
+  border-color: black;
+}
+
+.btn-default.btn-ce:active {
+  background: #AA0000;
+  border-color: black;
+}
+
+.btn-ce:focus {
+  background: #CC0000;
   border-color: black;
 }
 
@@ -30,6 +60,21 @@
 .btn-equals {
   height: 104px;
   background: red;
+  border-color: black;
+}
+
+.btn-equals:hover {
+  background: #CC0000;
+  border-color: black;
+}
+
+.btn-default.btn-equals:active {
+  background: #AA0000;
+  border-color: black;
+}
+
+.btn-equals:focus {
+  background: #CC0000;
   border-color: black;
 }
 
