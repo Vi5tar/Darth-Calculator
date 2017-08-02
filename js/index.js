@@ -13,12 +13,12 @@ function ac() {
 
 function ce() {
   equation.pop();
-  if (equation.length == 0){
-    document.getElementById("display").innerHTML = initialDisplay;    
+  if (equation.length == 0) {
+    document.getElementById("display").innerHTML = initialDisplay;
   } else {
-    document.getElementById("display").innerHTML = equation.join("");    
+    document.getElementById("display").innerHTML = equation.join("");
   }
-  
+
 }
 
 function divide() {
@@ -147,16 +147,25 @@ function compute() {
   var finalEquation = [];
   var runningTotal = 0;
   var operator = "";
+  console.log(equation);
+
+  if (equation.length == 0) {
+    finalEquation.push(0);
+  }
 
   for (var i = 0; i < equation.length; i++) {
-    if (
-      (equation[i] != "+" &&
-        equation[i] != "-" &&
-        equation[i] != "x" &&
-        equation[i] != "/") ||
-      equation[i] == "."
-    ) {
-      numArray.push(equation[i]);
+    if ((equation[i] != "+" &&
+    equation[i] != "-" &&
+    equation[i] != "x" &&
+    equation[i] != "/") ||
+    equation[i] == ".") {
+    numArray.push(equation[i]);
+    } else if (equation[0] == "+" ||
+      equation[i] == "-" ||
+      equation[i] == "x" ||
+      equation[i] == "/") {
+      finalEquation.push(0);
+      finalEquation.push(equation[i]);
     } else {
       finalEquation.push(parseFloat(numArray.join(""), 10));
       numArray = [];
@@ -167,7 +176,7 @@ function compute() {
   finalEquation.push(parseFloat(numArray.join(""), 10));
   numArray = [];
   equation = [];
-  //console.log(finalEquation);
+  console.log(finalEquation);
 
   for (var k = 0; k < finalEquation.length; k++) {
     if (k === 0) {
