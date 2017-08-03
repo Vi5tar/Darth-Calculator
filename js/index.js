@@ -147,10 +147,22 @@ function compute() {
   var finalEquation = [];
   var runningTotal = 0;
   var operator = "";
-  console.log(equation);
+  console.log("equation:" + equation);
 
   if (equation.length == 0) {
     finalEquation.push(0);
+  }
+
+  if (equation.length == 1 && equation[0] == ".") {
+    finalEquation.push(0);
+  }
+
+  if (equation.length == 1 &&
+    (equation[0] == "+" ||
+      equation[0] == "-" ||
+      equation[0] == "x" ||
+      equation[0] == "/")) {
+    equation[0] = 0;
   }
 
   for (var i = 0; i < equation.length; i++) {
@@ -176,7 +188,7 @@ function compute() {
   finalEquation.push(parseFloat(numArray.join(""), 10));
   numArray = [];
   equation = [];
-  console.log(finalEquation);
+  console.log("final equation:" + finalEquation);
 
   for (var k = 0; k < finalEquation.length; k++) {
     if (k === 0) {
