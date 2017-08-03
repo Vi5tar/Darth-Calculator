@@ -155,11 +155,11 @@ function compute() {
 
   for (var i = 0; i < equation.length; i++) {
     if ((equation[i] != "+" &&
-    equation[i] != "-" &&
-    equation[i] != "x" &&
-    equation[i] != "/") ||
-    equation[i] == ".") {
-    numArray.push(equation[i]);
+        equation[i] != "-" &&
+        equation[i] != "x" &&
+        equation[i] != "/") ||
+      equation[i] == ".") {
+      numArray.push(equation[i]);
     } else if (equation[0] == "+" ||
       equation[i] == "-" ||
       equation[i] == "x" ||
