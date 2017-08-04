@@ -1,6 +1,8 @@
 var display = "";
 var equation = [];
 var initialDisplay = 0;
+var runningTotal = 0;
+var pressedDigit = "";
 
 $(document).ready(function() {
   document.getElementById("display").innerHTML = initialDisplay;
@@ -46,18 +48,18 @@ function multiply() {
 }
 
 function seven() {
-  equation.push(7);
-  document.getElementById("display").innerHTML = equation.join("");
+  pressedDigit = 7;
+  replaceOrAmend();
 }
 
 function eight() {
-  equation.push(8);
-  document.getElementById("display").innerHTML = equation.join("");
+  pressedDigit = 8;
+  replaceOrAmend();
 }
 
 function nine() {
-  equation.push(9);
-  document.getElementById("display").innerHTML = equation.join("");
+  pressedDigit = 9;
+  replaceOrAmend();
 }
 
 function minus() {
@@ -73,18 +75,18 @@ function minus() {
 }
 
 function four() {
-  equation.push(4);
-  document.getElementById("display").innerHTML = equation.join("");
+  pressedDigit = 4;
+  replaceOrAmend();
 }
 
 function five() {
-  equation.push(5);
-  document.getElementById("display").innerHTML = equation.join("");
+  pressedDigit = 5;
+  replaceOrAmend();
 }
 
 function six() {
-  equation.push(6);
-  document.getElementById("display").innerHTML = equation.join("");
+  pressedDigit = 6;
+  replaceOrAmend();
 }
 
 function plus() {
@@ -100,23 +102,23 @@ function plus() {
 }
 
 function one() {
-  equation.push(1);
-  document.getElementById("display").innerHTML = equation.join("");
+  pressedDigit = 1;
+  replaceOrAmend();
 }
 
 function two() {
-  equation.push(2);
-  document.getElementById("display").innerHTML = equation.join("");
+  pressedDigit = 2;
+  replaceOrAmend();
 }
 
 function three() {
-  equation.push(3);
-  document.getElementById("display").innerHTML = equation.join("");
+  pressedDigit = 3;
+  replaceOrAmend();
 }
 
 function zero() {
-  equation.push(0);
-  document.getElementById("display").innerHTML = equation.join("");
+  pressedDigit = 0;
+  replaceOrAmend();
 }
 
 function dot() {
@@ -145,9 +147,7 @@ function dot() {
 function compute() {
   var numArray = [];
   var finalEquation = [];
-  var runningTotal = 0;
   var operator = "";
-  console.log("equation:" + equation);
 
   if (equation.length == 0) {
     finalEquation.push(0);
@@ -173,9 +173,9 @@ function compute() {
       equation[i] == ".") {
       numArray.push(equation[i]);
     } else if (equation[0] == "+" ||
-      equation[i] == "-" ||
-      equation[i] == "x" ||
-      equation[i] == "/") {
+      equation[0] == "-" ||
+      equation[0] == "x" ||
+      equation[0] == "/") {
       finalEquation.push(0);
       finalEquation.push(equation[i]);
     } else {
@@ -188,7 +188,6 @@ function compute() {
   finalEquation.push(parseFloat(numArray.join(""), 10));
   numArray = [];
   equation = [];
-  console.log("final equation:" + finalEquation);
 
   for (var k = 0; k < finalEquation.length; k++) {
     if (k === 0) {
@@ -219,13 +218,18 @@ function compute() {
   }
   document.getElementById("display").innerHTML = runningTotal;
   equation.push(runningTotal);
-  //console.log(equation);
 }
 
 function dotSearch(element) {
   return element != ".";
 }
 
-function equationLog() {
-  console.log(equation);
+function replaceOrAmend() {
+  if (equation.length == 1 && equation[0] == runningTotal) {
+    equation[0] = pressedDigit;
+    document.getElementById("display").innerHTML = equation.join("");
+  } else {
+    equation.push(pressedDigit);
+    document.getElementById("display").innerHTML = equation.join("");
+  }
 }
