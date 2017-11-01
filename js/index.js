@@ -216,8 +216,10 @@ function compute() {
       }
     }
   }
-  document.getElementById("display").innerHTML = runningTotal;
-  equation.push(runningTotal);
+  // to remove extra numbers introduced by floating point arithmetic
+  var answer = runningTotal.toFixed(8);
+  document.getElementById("display").innerHTML = parseFloat(answer);
+  equation.push(parseFloat(answer));
 }
 
 function dotSearch(element) {
